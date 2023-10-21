@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('getData',[HomeController::class,'getData']);
+Route::get('insertData',[HomeController::class,'insertData']);
+Route::get('updateData',[HomeController::class,'updateData']);
+Route::get('deleteData',[HomeController::class,'deleteData']);
